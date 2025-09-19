@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLine AI - Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"> <img src="logo.png" alt="CareLine AI Logo" style="height: 80px;"> </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="numbers.html">Номера помощи</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>Свяжитесь с нами</h1>
+                <p>Если у вас есть вопросы или предложения, мы будем рады их услышать.</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-details">
+                    <h3>Наша информация</h3>
+                    <p><strong>Email:</strong> sensiblegdef@gmail.com</p>
+                    <p><strong>Адрес:</strong> ул. Назарбаева, д. 162, г. Уральск</p>
+                    <p><em>Пожалуйста, обратите внимание: мы не предоставляем прямую психологическую помощь по этим контактам. Для экстренной помощи воспользуйтесь номерами из соответствующего раздела.</em></p>
+                </div>
+                <div class="contact-form">
+                    <h3>Отправить сообщение</h3>
+                    <form action="http://127.0.0.1:5000/send_email" method="POST">
+                        <label for="name">Ваше имя и фамилия:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit" class="cta-button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CareLine AI. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+     window.difyChatbotConfig = {
+      token: 'TN6Ll6igCziptX6K',
+      baseUrl: 'http://hackathon.shai.pro',
+      systemVariables: {},
+     }
+    </script>
+    <script
+     src="http://hackathon.shai.pro/embed.min.js"
+     id="TN6Ll6igCziptX6K"
+     defer>
+    </script>
+    <style>
+        
+        #dify-chatbot-bubble-button {
+          background-color: #2a7a7a !important;
+        }
+        #dify-chatbot-bubble-window {
+          width: 24rem !important;
+          height: 40rem !important;
+        }
+  
+      
+        #dify-chatbot-bubble-button {
+          position: fixed !important; 
+          right: 20px !important;     
+          bottom: 20px !important;   
+          z-index: 9999 !important;   
+        }
+  
+        #dify-chatbot-bubble-window {
+          position: fixed !important; 
+          right: 20px !important;     
+          bottom: 20px !important;
+          z-index: 9999 !important;
+        }
+      </style>
+
+</body>
+</html>
