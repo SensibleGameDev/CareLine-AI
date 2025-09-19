@@ -1,7 +1,6 @@
 import os
 import smtplib
 from email.message import EmailMessage
-# from email.header import Header 
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -20,8 +19,7 @@ def send_email():
         return "Ошибка: Пожалуйста, заполните все поля.", 400
 
     msg = EmailMessage()
-    
-    # <<< 2. ВОЗВРАЩАЕМ ПРОСТУЮ СТРОКУ ДЛЯ ТЕМЫ ПИСЬМА
+
     msg['Subject'] = f"Новое сообщение с сайта CareLine AI от {name}"
     
     msg['From'] = SENDER_EMAIL
@@ -37,7 +35,7 @@ def send_email():
 
     """
     
-    # Эта строка решает проблему с кодировкой для всего письма
+ 
     msg.set_payload(email_body, charset='utf-8')
 
     try:
@@ -53,3 +51,4 @@ def send_email():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
